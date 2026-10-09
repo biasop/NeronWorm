@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "name": "NeuroWorm bilateral reflex demo",
+    "description": "Artificial wiring, not an anatomical C. elegans dataset.",
+    "sensor_mapping": {
+      "food_left": "food_left",
+      "food_right": "food_right",
+      "danger_left": "danger_left",
+      "danger_right": "danger_right",
+      "touch_left": "touch_left",
+      "touch_right": "touch_right",
+      "drive_left": "drive_left",
+      "drive_right": "drive_right"
+    },
+    "motor_mapping": {
+      "motor_left": "motor_left",
+      "motor_right": "motor_right"
+    }
+  },
+  "neurons": [
+    {
+      "neuron_id": "food_left",
+      "name": "FOOD L",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "danger_left",
+      "name": "DANGER L",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "touch_left",
+      "name": "TOUCH L",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "drive_left",
+      "name": "DRIVE L",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "food_1_left",
+      "name": "FOOD_1 L",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "food_2_left",
+      "name": "FOOD_2 L",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "avoid_1_left",
+      "name": "AVOID_1 L",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "avoid_2_left",
+      "name": "AVOID_2 L",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "forward_left",
+      "name": "FORWARD L",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "touch_inter_left",
+      "name": "TOUCH_INTER L",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "motor_left",
+      "name": "MOTOR L",
+      "role": "motor",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "tail_left",
+      "name": "TAIL L",
+      "role": "motor",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "food_right",
+      "name": "FOOD R",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "danger_right",
+      "name": "DANGER R",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "touch_right",
+      "name": "TOUCH R",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "drive_right",
+      "name": "DRIVE R",
+      "role": "sensory",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "food_1_right",
+      "name": "FOOD_1 R",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "food_2_right",
+      "name": "FOOD_2 R",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "avoid_1_right",
+      "name": "AVOID_1 R",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "avoid_2_right",
+      "name": "AVOID_2 R",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "forward_right",
+      "name": "FORWARD R",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "touch_inter_right",
+      "name": "TOUCH_INTER R",
+      "role": "interneuron",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "motor_right",
+      "name": "MOTOR R",
+      "role": "motor",
+      "parameters": {}
+    },
+    {
+      "neuron_id": "tail_right",
+      "name": "TAIL R",
+      "role": "motor",
+      "parameters": {}
+    }
+  ],
+  "chemical_synapses": [
+    {
+      "source_id": "food_left",
+      "target_id": "food_1_left",
+      "weight": 340,
+      "delay_ms": 2
+    },
+    {
+      "source_id": "food_1_left",
+      "target_id": "motor_left",
+      "weight": 180,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "food_1_left",
+      "target_id": "motor_right",
+      "weight": -45,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "danger_left",
+      "target_id": "avoid_1_left",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_1_left",
+      "target_id": "motor_right",
+      "weight": 270,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_1_left",
+      "target_id": "motor_left",
+      "weight": -210,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_1_left",
+      "target_id": "food_1_left",
+      "weight": -160,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "food_left",
+      "target_id": "food_2_left",
+      "weight": 340,
+      "delay_ms": 2
+    },
+    {
+      "source_id": "food_2_left",
+      "target_id": "motor_left",
+      "weight": 180,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "food_2_left",
+      "target_id": "motor_right",
+      "weight": -45,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "danger_left",
+      "target_id": "avoid_2_left",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_2_left",
+      "target_id": "motor_right",
+      "weight": 270,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_2_left",
+      "target_id": "motor_left",
+      "weight": -210,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_2_left",
+      "target_id": "food_2_left",
+      "weight": -160,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "drive_left",
+      "target_id": "forward_left",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "forward_left",
+      "target_id": "motor_left",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "touch_left",
+      "target_id": "touch_inter_left",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "touch_inter_left",
+      "target_id": "motor_right",
+      "weight": 540,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "touch_inter_left",
+      "target_id": "motor_left",
+      "weight": -300,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "motor_left",
+      "target_id": "tail_left",
+      "weight": 330,
+      "delay_ms": 2
+    },
+    {
+      "source_id": "food_right",
+      "target_id": "food_1_right",
+      "weight": 340,
+      "delay_ms": 2
+    },
+    {
+      "source_id": "food_1_right",
+      "target_id": "motor_right",
+      "weight": 180,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "food_1_right",
+      "target_id": "motor_left",
+      "weight": -45,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "danger_right",
+      "target_id": "avoid_1_right",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_1_right",
+      "target_id": "motor_left",
+      "weight": 270,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_1_right",
+      "target_id": "motor_right",
+      "weight": -210,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_1_right",
+      "target_id": "food_1_right",
+      "weight": -160,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "food_right",
+      "target_id": "food_2_right",
+      "weight": 340,
+      "delay_ms": 2
+    },
+    {
+      "source_id": "food_2_right",
+      "target_id": "motor_right",
+      "weight": 180,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "food_2_right",
+      "target_id": "motor_left",
+      "weight": -45,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "danger_right",
+      "target_id": "avoid_2_right",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_2_right",
+      "target_id": "motor_left",
+      "weight": 270,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_2_right",
+      "target_id": "motor_right",
+      "weight": -210,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "avoid_2_right",
+      "target_id": "food_2_right",
+      "weight": -160,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "drive_right",
+      "target_id": "forward_right",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "forward_right",
+      "target_id": "motor_right",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "touch_right",
+      "target_id": "touch_inter_right",
+      "weight": 340,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "touch_inter_right",
+      "target_id": "motor_left",
+      "weight": 360,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "touch_inter_right",
+      "target_id": "motor_right",
+      "weight": -160,
+      "delay_ms": 1
+    },
+    {
+      "source_id": "motor_right",
+      "target_id": "tail_right",
+      "weight": 330,
+      "delay_ms": 2
+    }
+  ],
+  "gap_junctions": [
+    {
+      "neuron_a_id": "motor_left",
+      "neuron_b_id": "tail_left",
+      "conductance": 0.015
+    },
+    {
+      "neuron_a_id": "motor_right",
+      "neuron_b_id": "tail_right",
+      "conductance": 0.015
+    },
+    {
+      "neuron_a_id": "forward_left",
+      "neuron_b_id": "forward_right",
+      "conductance": 0.02
+    },
+    {
+      "neuron_a_id": "food_1_left",
+      "neuron_b_id": "food_2_left",
+      "conductance": 0.01
+    },
+    {
+      "neuron_a_id": "food_1_right",
+      "neuron_b_id": "food_2_right",
+      "conductance": 0.01
+    }
+  ]
+}
